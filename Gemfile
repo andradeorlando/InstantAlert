@@ -8,8 +8,12 @@ gem 'rails', '3.2.17'
 gem 'devise'
 
 group :development do
-gem 'pg'
+gem 'sqlite3'
 gem 'better_errors'
+end
+
+group :production do
+	gem 'pg'
 end
 
 

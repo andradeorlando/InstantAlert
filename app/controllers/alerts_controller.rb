@@ -3,12 +3,16 @@ class AlertsController < ApplicationController
   # GET /alerts
   # GET /alerts.json
   def index
+    if user_signed_in?
     @alerts = Alert.all
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @alerts }
     end
+  else
+    redirect_to :new_user_session
+  end
   end
 
   # GET /alerts/1

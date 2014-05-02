@@ -15,7 +15,7 @@
     <nav class="top-bar" data-topbar>
   <ul class="title-area">
     <li class="name">
-      <h1><a href="#">Instant Alert</a></h1>
+      <h1><%= link_to  'Instant Alerts', alerts_path %></h1>
     </li>
      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -59,7 +59,7 @@
   </section>
 </nav>
   <div class="row">
-    <div class="columns large-12">
+    <div class="columns large-12 medium-12 small-12">
       <br>
       <% flash.each do |type, message| %>
       <div data-alert class="alert-box radius <%= flass_class type %>">
@@ -74,4 +74,7 @@
 </div>
     <%= javascript_include_tag "application" %>
   </body>
+  <footer>
+  <p>InstantAlert</p>
+  </footer>
 </html>
