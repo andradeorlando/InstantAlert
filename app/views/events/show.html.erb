@@ -1,0 +1,35 @@
+
+
+<p>
+  <b>Name:</b>
+  <%= @event.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @event.description %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @event.location %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @event.date %>
+</p>
+
+<p>
+  <b>Hour:</b>
+  <%= @event.hour %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @event.user.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_path(@event), class: 'button' %> 
+
