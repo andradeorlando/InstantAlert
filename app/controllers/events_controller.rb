@@ -3,12 +3,16 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
+    if user_signed_in?
     @events = Event.all
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @events }
     end
+     else
+    redirect_to :new_user_session
+  end
   end
 
   # GET /events/1
