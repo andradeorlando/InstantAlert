@@ -28,7 +28,9 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
-  gem 'compass'
+  gem 'sass', '3.3.0.alpha.149'
+  gem 'compass', '0.12.2'
+  gem 'compass-sourcemaps', "~> 0.12.2.sourcemaps.57a186c"
   gem 'zurb-foundation'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
