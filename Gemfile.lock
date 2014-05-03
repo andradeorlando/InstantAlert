@@ -149,7 +149,6 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   coffee-rails (~> 3.2.1)
-  compass
   devise
   jquery-rails
   pg
