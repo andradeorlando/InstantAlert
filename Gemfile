@@ -12,6 +12,10 @@ gem 'sqlite3'
 gem 'better_errors'
 end
 
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
 
 
 
@@ -21,7 +25,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
-  gem 'foundation-rails'
+  gem 'zurb-foundation'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
