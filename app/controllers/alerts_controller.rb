@@ -30,7 +30,7 @@ class AlertsController < ApplicationController
   # GET /alerts/new.json
   def new
     @alert = Alert.new
-    
+        
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @alert }
@@ -46,6 +46,7 @@ class AlertsController < ApplicationController
   # POST /alerts.json
   def create
     @alert = Alert.new(params[:alert])
+    @alert.user = current_user
 
     respond_to do |format|
       if @alert.save

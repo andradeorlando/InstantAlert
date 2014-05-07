@@ -1,4 +1,8 @@
 Instantalert::Application.routes.draw do
+  resources :towns
+
+
+  root :to => 'alerts#index'
   devise_for :users
 
   resources :events
@@ -9,7 +13,7 @@ Instantalert::Application.routes.draw do
 
   resources :users
 
-root :to => 'alerts#index'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

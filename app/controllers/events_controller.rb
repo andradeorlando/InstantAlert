@@ -31,7 +31,6 @@ class EventsController < ApplicationController
   def new
     @event = Event.new
     
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @event }
@@ -47,6 +46,7 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(params[:event])
+    @event.user = current_user
 
     respond_to do |format|
       if @event.save
