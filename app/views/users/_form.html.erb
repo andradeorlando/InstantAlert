@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :location %><br />
-    <%= f.text_field :town_id %>
+   <%= f.select :town_id, options_for_select(@towns) %>
   </div>
   <div class="field">
     <%= f.label :description %><br />

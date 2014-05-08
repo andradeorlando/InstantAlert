@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  before_filter :get_towns
+
   # GET /users
   # GET /users.json
   def index
@@ -79,5 +82,9 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url }
       format.json { head :no_content }
     end
+  end
+  private
+   def get_towns
+    @towns =Town.all.map {|town| [town.name, town.id]}
   end
 end

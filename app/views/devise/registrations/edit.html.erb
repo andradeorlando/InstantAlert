@@ -7,7 +7,7 @@
   <%= f.text_field :name, autofocus: true %></div>
 
   <div><%= f.label :location %><br />
-  <%= f.select :town_id, options_for_select(Town.all.map {|town| [town.name, town.id]}) %></div>
+  <%= f.number_field :town_id %></div>
 
   <div><%= f.label :description %><br />
   <%= f.text_area :description %></div>
