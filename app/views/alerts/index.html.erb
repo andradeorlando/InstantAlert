@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>Content</th>
-    <th>User</th>
+    
     <th></th>
     <th></th>
     <th></th>
@@ -21,7 +21,7 @@
     </div>
   <tr>
     <td><%= alert.content %></td>
-    <td><%= alert.user.name %></td>
+    
     <td><%= link_to 'Show', alert %></td>
     <% if current_user == alert.user %>
     <td><%= link_to 'Edit', edit_alert_path(alert) %></td>
