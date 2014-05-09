@@ -17,16 +17,13 @@
       <blockquote>
         <%= alert.content %>
         <cite><%= alert.user.name %> - <em><%= time_ago_in_words(alert.created_at) %> ago</em></cite>
-      </blockquote>
-    </div>
-  <tr>
-    
-    <td><%= link_to 'Show', alert %></td>
+         <td><%= link_to 'Show', alert %></td>
     <% if current_user == alert.user %>
     <td><%= link_to 'Edit', edit_alert_path(alert) %></td>
     <td><%= link_to 'Destroy', alert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <% end %>
-  </tr>
+      </blockquote>
+    </div>
 <% end %>
 <% end %>
 </table>

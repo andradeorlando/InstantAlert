@@ -4,7 +4,7 @@
   <tr>
     <th>Name</th>
     <th>Description</th>
-    <th>Location</th>
+    <th>Address</th>
     <th>Date</th>
     <th>Hour</th>
     <th>User</th>
@@ -18,7 +18,7 @@
   <tr>
     <td><%= event.name %></td>
     <td><%= event.description %></td>
-    <cite><%= event.user.name %> - <em><%= time_ago_in_words(event.created_at) %> ago</em></cite>
+    <td><cite><%= event.user.name %> - <em><%= time_ago_in_words(event.created_at) %> ago</em></cite></td>
     <td><%= event.location %></td>
     <td><%= event.date %></td>
     <td><%= event.hour %></td>
