@@ -1,0 +1,89 @@
+body{
+	background: #E5E5E6;
+}
+
+
+header h2{
+	margin: 50px 0px 20px 0px;
+	font-size: 3.125em;
+}
+
+header p{
+	font-size: 1.5em;
+}
+
+header h1 a{
+	background:url(logo.png) no-repeat;
+	background-size:contain;
+	display:block;
+	height:50px;
+	outline:none;
+	text-indent:-9999px;
+	width:200px;
+	padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 10px;
+}
+
+header h2, p{
+	color: white;
+	text-align: center;
+}
+
+.top-bar{
+	height: 70px;
+}
+
+.top-bar ul{
+  margin: 10px;
+}
+
+.top-bar .name{
+	margin: 10px;
+}
+
+.button.button-on-dark {
+border-color: #FFF;
+color: #FFF;
+}
+
+.button {
+padding: 7px 20px;
+color: #38D5B8;
+background: rgba(0, 0, 0, 0);
+text-align: center;
+text-decoration: none;
+border: 3px solid #38D5B8;
+font-style: normal;
+font-weight: 600;
+outline: none;
+-webkit-transition: background-color 0.1s ease,color 0.1s ease;
+-moz-transition: background-color 0.1s ease,color 0.1s ease;
+-o-transition: background-color 0.1s ease,color 0.1s ease;
+transition: background-color 0.1s ease,color 0.1s ease;
+}
+
+.button, input {
+-webkit-border-radius: 0 !important;
+-moz-border-radius: 0 !important;
+-ms-border-radius: 0 !important;
+-o-border-radius: 0 !important;
+border-radius: 0 !important;
+}
+
+.button.large{
+	text-align: center;
+	padding: 20px;
+
+}
+
+#start a.button:hover{
+	background-color: white;
+	color: rgba(0, 0, 0, 1);
+
+}
+.sthead {
+	background: url(fondo2.jpg) no-repeat center center;
+}
+
+

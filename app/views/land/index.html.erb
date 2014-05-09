@@ -1,0 +1,64 @@
+ <header class="sthead">
+    <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a style="padding-left: 20px; padding-right: 20px;" href="">instantalert</a></h1>
+          </li>
+         
+           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+              <ul class="right">
+                   <li class="divider"></li>
+                   <% if user_signed_in? %>
+                   <li>
+                    <%= link_to current_user.name, edit_user_registration_path %>
+                    </li>
+                    <li>
+                    <%= link_to 'Log Out' , destroy_user_session_path, method: :delete %>
+                    </li>
+                    <% else %>
+                    <li>
+                      <%= link_to 'Sign Up', new_user_registration_path %>
+                    </li>
+                    <li>
+                      <%= link_to "Sign In", new_user_session_path %>
+                    </li>
+                    <% end %>
+                </ul>
+
+          <!-- Left Nav Section -->
+
+              <ul class="left">
+                  <li class="divider"></li>
+                  <%if user_signed_in? %>
+                    <li>
+                      <%= link_to  'Users', users_path %>
+                    </li>
+                    <li>
+                      <%= link_to  'Alerts', alerts_path %>
+                    </li>
+                    <li>
+                      <%= link_to  'Events', events_path %>
+                    </li>
+                  <% end %>
+              </ul>
+        </section>
+</nav>
+
+<div id="start" class="row">
+            <div class="start columns large-12">
+                <h2>Enterate de los eventos de tu barrio antes de llegar a la esquina.</h2>
+                <p>Eventos, promociones, alertas <br /> Todo a tu alcance en un mismo espacio.</p>
+
+                <p><a class="button large white button-on-dark" href="">Enterate ahora</a></p>
+            </div>
+
+</div>
+  
+</header>
+
+

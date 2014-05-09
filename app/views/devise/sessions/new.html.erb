@@ -1,7 +1,62 @@
-<div class="row panel">
-<section class="columns large-9 medium-9 small-16 large-centered medium-centered small-centered">
-	<div class="center">
-		<h2 class="text-center"><small>Please, Sign in</small></h2>
+<header>
+    <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><%= link_to  'Instant Alerts', landing_path %></h1>
+          </li>
+           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+              <ul class="right">
+                   <li class="divider"></li>
+                   <% if user_signed_in? %>
+                   <li>
+                    <%= link_to current_user.name, edit_user_registration_path %>
+                    </li>
+                    <li>
+                    <%= link_to 'Log Out' , destroy_user_session_path, method: :delete %>
+                    </li>
+                    <% else %>
+                    <li>
+                      <%= link_to 'Sign Up', new_user_registration_path %>
+                    </li>
+                    <li>
+                      <%= link_to "Sign In", new_user_session_path %>
+                    </li>
+                    <% end %>
+                </ul>
+
+          <!-- Left Nav Section -->
+
+              <ul class="left">
+                  <li class="divider"></li>
+                  <%if user_signed_in? %>
+                    <li>
+                      <%= link_to  'Users', users_path %>
+                    </li>
+                    <li>
+                      <%= link_to  'Alerts', alerts_path %>
+                    </li>
+                    <li>
+                      <%= link_to  'Events', events_path %>
+                    </li>
+                  <% end %>
+              </ul>
+        </section>
+</nav>
+
+
+</header>
+
+<div class="row  ">
+  <section class="panel offset-by-one columns large-4 medium-5 small-16 large-centered medium-centered small-centered" style="
+    margin-top: 20px;
+">
+      <div class="center">
+		<h2 class="text-center"><small>Ingresa ahora!</small></h2>
 
 		<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 			<div><br />
@@ -21,7 +76,7 @@
 			<div><%= f.submit "Sign in", class: 'button small radius round' %></div>
 		<% end %>
 
-		<%= render "devise/shared/links" %>
-	</div>
-</section>
+		
+      </div>
+    </section>
 </div>

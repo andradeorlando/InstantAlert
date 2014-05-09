@@ -1,0 +1,3 @@
+class LandController < ApplicationController
+
+end

@@ -2,7 +2,7 @@ Instantalert::Application.routes.draw do
   resources :towns
 
 
-  root :to => 'alerts#index'
+  root :to => 'land#index'
   devise_for :users
 
   resources :events
