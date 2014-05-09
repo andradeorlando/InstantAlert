@@ -15,6 +15,14 @@
 
 <% @events.each do |event| %>
  <% if event.user.town==current_user.town %>
+ <hr>
+  <div class="row">
+    <div class="columns large-9 medium-6">
+      <blockquote>
+        <%= event.content %>
+        <cite><%= event.user.name %> - <em><%= time_ago_in_words(event.created_at) %> ago</em></cite>
+      </blockquote>
+    </div>
   <tr>
     <td><%= event.name %></td>
     <td><%= event.description %></td>

@@ -11,6 +11,14 @@
 
 <% @alerts.each do |alert| %>
  <% if alert.user.town==current_user.town %>
+ <hr>
+  <div class="row">
+    <div class="columns large-9 medium-6">
+      <blockquote>
+        <%= alert.content %>
+        <cite><%= alert.user.name %> - <em><%= time_ago_in_words(alert.created_at) %> ago</em></cite>
+      </blockquote>
+    </div>
   <tr>
     <td><%= alert.content %></td>
     <td><%= alert.user.name %></td>
