@@ -14,7 +14,7 @@
   </tr>
 
 <% @events.each do |event| %>
- <% if alert.user.town==current_user.town %>
+ <% if event.user.town==current_user.town %>
   <tr>
     <td><%= event.name %></td>
     <td><%= event.description %></td>
