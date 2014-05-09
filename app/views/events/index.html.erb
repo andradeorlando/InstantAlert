@@ -22,8 +22,10 @@
     <td><%= event.hour %></td>
     <td><%= event.user.name %></td>
     <td><%= link_to 'Show', event %></td>
+    <% if current_user == alert.user %>
     <td><%= link_to 'Edit', edit_event_path(event) %></td>
     <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

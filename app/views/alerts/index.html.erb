@@ -10,13 +10,17 @@
   </tr>
 
 <% @alerts.each do |alert| %>
+ <% if alert.user.town==current_user.town %>
   <tr>
     <td><%= alert.content %></td>
     <td><%= alert.user.name %></td>
     <td><%= link_to 'Show', alert %></td>
+    <% if current_user == alert.user %>
     <td><%= link_to 'Edit', edit_alert_path(alert) %></td>
     <td><%= link_to 'Destroy', alert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
   </tr>
+<% end %>
 <% end %>
 </table>
 
