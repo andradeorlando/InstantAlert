@@ -14,6 +14,7 @@
   </tr>
 
 <% @events.each do |event| %>
+ <% if alert.user.town==current_user.town %>
   <tr>
     <td><%= event.name %></td>
     <td><%= event.description %></td>
@@ -22,11 +23,12 @@
     <td><%= event.hour %></td>
     <td><%= event.user.name %></td>
     <td><%= link_to 'Show', event %></td>
-    <% if current_user == alert.user %>
+    <% if current_user == event.user %>
     <td><%= link_to 'Edit', edit_event_path(event) %></td>
     <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <% end %>
   </tr>
+<% end %>
 <% end %>
 </table>
 
